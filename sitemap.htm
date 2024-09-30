@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chloe Samaha - Sitemap</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Add jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<style>
+    /* Style for the sitemap container */
+    .sitemap-container {
+        background-color: #242424;
+        color: white;
+        padding: 20px;
+        margin: 20px auto;
+        max-width: 1200px;
+        border-radius: 10px;
+        
+        counter-reset: section;
+        display: none; 
+    }
+
+    /* Style for the top-level list items */
+    .sitemap-container > ul {
+        list-style-type: none; 
+        padding-left: 0; 
+        counter-reset: listCounter;
+    }
+
+    .sitemap-container > ul > li {
+        margin: 10px 0; 
+        counter-increment: listCounter;
+    }
+
+    /* Style for the top-level list items' numbers */
+    .sitemap-container > ul > li::before {
+        content: counter(listCounter) ". "; 
+        font-weight: bold; 
+        margin-right: 5px; 
+    }
+
+    /* Style for the nested lists */
+    .sitemap-container ul ul {
+        list-style-type: none; 
+        padding-left: 20px; 
+        counter-reset: sublistCounter; 
+    }
+
+    /* Style for the nested list items */
+    .sitemap-container ul ul li {
+        counter-increment: sublistCounter; 
+    }
+
+    /* Style for the nested list items' letters */
+    .sitemap-container ul ul li::before {
+        content: counter(sublistCounter, lower-alpha) ". "; 
+        margin-right: 5px; 
+    }
+</style>
+
+<body>
+    <!-- Page Header -->
+     <div id="banner">
+        <h1 id="heading">Chloe Samaha</h1>
+        <h3 id="subheading">Co-Founder & CEO @BOND</h3>
+        <div class="sociallinks">
+                <a href="https://www.linkedin.com/in/chloesamaha/">LinkedIn</a> |
+                <a href="https://www.instagram.com/bondwithchloe/">Instagram</a> |
+                <a href="mailto:chloe@bondapp.io">Mail</a>
+        </div>
+    </div>
+    
+    <!-- Navigation Menu -->
+    <div class="topnav">
+        <a href="index.htm">Home</a>
+        <!-- Dropdown for Professional -->
+        <div class="dropdown">
+            <button class="dropbtn">Professional</button>
+            <div class="dropdown-content">
+                <a href="career.htm">Career</a>
+                <a href="skills.htm">Skills</a>
+                <a href="projects.htm">Projects</a>
+            </div>
+        </div>
+    
+        <!-- Dropdown for Personal -->
+        <div class="dropdown">
+            <button class="dropbtn">Personal</button>
+            <div class="dropdown-content">
+                <a href="bio.htm">Bio</a>
+                <a href="hobbies.htm">Hobbies</a>
+                <a href="blog.htm">Blog</a>
+            </div>
+        </div>
+    
+        <a href="contact.htm">Contact Us</a>
+        <a href="sitemap.htm">Sitemap</a>
+    </div>
+
+
+    <!-- Sitemap Specific Info -->
+    <div class="sitemap-container">
+        <h1>Sitemap</h1>
+
+        <ul>
+            <li><a href="index.htm">Home</a>
+            </li>
+                <li>Professional
+                    <ul>
+                    <li><a href="career.htm">Career</a></li>
+                    <li><a href="skills.htm">Skills</a></li>
+                    <li><a href="projects.htm">Projects</a></li>
+                    </ul>
+                </li>
+                <li>Personal
+                    <ul>
+                    <li><a href="bio.htm">Bio</a></li>
+                    <li><a href="hobbies.htm">Hobbies</a></li>
+                    <li><a href="blog.htm">Blog</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.htm">Contact</a></li>
+                <li><a href="sitemap.htm">Sitemap</a></li>
+        </ul>
+
+          
+    </div>
+
+    <script>
+        // jQuery function to animate page elements
+        $(document).ready(function(){
+            // Animate social media links
+            $(".sociallinks a").animate({ fontSize: "24px" }, 1000).animate({ fontSize: "16px" }, 1000);
+            
+            // Fade in navigation links
+            $(".topnav a").hide().fadeIn(1000);
+            
+            // Slide in sitemap items
+            $(".sitemap-container").slideDown(1000);
+        });
+    </script>
+</body>
+</html>

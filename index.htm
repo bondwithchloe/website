@@ -1,0 +1,262 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chloe Samaha - Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Add jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<style>
+    /* Main Content Styles */
+    .main-content {
+        display: none; /* Hide initially */
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        padding: 20px;
+        background-color: #242424;
+        margin: 20px auto;
+        border-radius: 10px;
+        max-width: 1200px;
+    }
+
+    .text-section {
+        flex: 1;
+        margin-top: 0px;
+    }
+
+    .image-section {
+        flex-shrink: 0;
+        margin-right: 20px;
+        margin-top: 10px;
+    }
+
+    #profilepic {
+        width: 300px;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    @media (max-width: 600px) {
+        .main-content {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .text-section,
+        .image-section {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .image-section {
+            margin-bottom: 20px;
+        }
+    }
+
+    /* Featured Styles */
+    .featured-section {
+        display: flex;
+        justify-content: space-between; 
+        flex-wrap: wrap;
+        background-color: #242424;
+        padding: 20px;
+        margin: 20px auto;
+        border-radius: 10px;
+        max-width: 1200px; 
+    }
+
+    .featured-item {
+        flex: 1 1 calc(33.333% - 40px); 
+        max-width: calc(33.333% - 40px);
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #2e2e2e;
+        margin: 10px;
+        padding: 10px;
+        border-radius: 10px;
+        text-align: center;
+    }
+
+    .featured-item img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        margin-bottom: 10px;
+    }
+
+    .featured-section h2 {
+        color: white;
+        text-align: left; 
+        width: 100%;
+    }
+
+    .featured-item h3,
+    .featured-item p,
+    .featured-item a {
+        color: white;
+    }
+
+    /* Newsletter Subscription Styles */
+    .newsletter-subscription {
+        display: flex; 
+        flex-direction: column;
+        align-items: center; 
+        justify-content: center; 
+        background-color: #242424; 
+        padding: 20px; 
+        margin: 20px auto; 
+        border-radius: 10px; 
+        max-width: 1200px; 
+        width: 100%; 
+        box-sizing: border-box; 
+    }
+
+    .newsletter-subscription h2 {
+        margin-bottom: 20px;
+        text-align: center;
+        width: 100%; 
+        color: white; 
+    }
+
+    #newsletter-form {
+        display: flex;
+        justify-content: center; 
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+    }
+
+    #newsletter-form input[type="email"] {
+        flex-grow: 1; 
+        padding: 10px;
+        border: 1px solid #2e2e2e; 
+        border-radius: 5px; 
+        margin-right: 10px; 
+    }
+
+    #newsletter-form button {
+        flex-grow: 1; 
+        padding: 10px 20px;
+        border: 1px solid #2e2e2e; 
+        background-color: #2e2e2e; 
+        color: white; 
+        border-radius: 5px; 
+        cursor: pointer;
+        white-space: nowrap; 
+    }
+
+    #newsletter-form button,
+    #newsletter-form input[type="email"] {
+        height: 40px; 
+    }
+
+    @media (max-width: 768px) {
+        .newsletter-subscription {
+            padding: 20px; 
+        }
+
+        #newsletter-form {
+            flex-direction: column; 
+            gap: 20px; 
+            width: calc(100% - 40px); 
+        }
+        
+        #newsletter-form input[type="email"],
+        #newsletter-form button {
+            width: 100%; 
+        }
+    }
+
+</style>
+
+<body>
+    <!-- Page Header -->
+    <div id="banner">
+        <h1 id="heading">Chloe Samaha</h1>
+        <h3 id="subheading">Co-Founder & CEO @BOND</h3>
+        <div class="sociallinks">
+            <a href="https://www.linkedin.com/in/chloesamaha/">LinkedIn</a> |
+            <a href="https://www.instagram.com/bondwithchloe/">Instagram</a> |
+            <a href="mailto:chloe@bondapp.io">Mail</a>
+        </div>
+    </div>
+
+    <!-- Navigation Menu -->
+    <div class="topnav">
+        <a href="index.htm">Home</a>
+        <!-- Dropdown for Professional -->
+        <div class="dropdown">
+            <button class="dropbtn">Professional</button>
+            <div class="dropdown-content">
+                <a href="career.htm">Career</a>
+                <a href="skills.htm">Skills</a>
+                <a href="projects.htm">Projects</a>
+            </div>
+        </div>
+    
+        <!-- Dropdown for Personal -->
+        <div class="dropdown">
+            <button class="dropbtn">Personal</button>
+            <div class="dropdown-content">
+                <a href="bio.htm">Bio</a>
+                <a href="hobbies.htm">Hobbies</a>
+                <a href="blog.htm">Blog</a>
+            </div>
+        </div>
+    
+        <a href="contact.htm">Contact Us</a>
+        <a href="sitemap.htm">Sitemap</a>
+    </div>
+
+    <!-- About Me -->
+    <div class="main-content">
+        <div class="text-section">
+            <h2>About Me</h2>
+            <p>Hi, I’m Chloe Samaha. After landing my dream job at a women-led PE firm, I quickly realized how workplace dynamics can limit potential. That led me to create BOND, a platform designed to help managers lead better and unlock their teams' full potential. If this resonates with you, feel free to reach out—I’d love to connect!</p>
+        </div>
+        <div class="image-section">
+            <img id="profilepic" src="pilotlaunch.jpg" alt="Chloe Samaha" />
+        </div>
+    </div>
+
+    <!-- Featured -->
+    <div class="featured-section">
+        <h2>Featured</h2>
+        <div class="featured-item">
+            <img src="chloesvp.jpg" alt="Feature 1">
+            <h3>Babson Magazine: Building Relationships in the Workplace</h3>
+            <p>Chloe Samaha '25 is just beginning her career as an entrepreneur, but she’s already mastering a key aspect of entrepreneurial leadership: the importance of people and...</p>
+            <a href="https://entrepreneurship.babson.edu/chloe-samaha-bond/">Read more</a>
+        </div>
+        <div class="featured-item">
+            <img src="babsonfinale.jpg" alt="Feature 2"><br/>
+            <h3>BostInno: Three winners named for Babson’s $150k Pitch Competition</h3>
+            <p>The student winner is Chloe Samaha, a current junior at Babson, with her venture BOND, an app that connects managers of virtual teams with their employees.</p>
+            <a href="https://www.bizjournals.com/boston/inno/stories/news/2024/04/17/babson-entrepreneurship-2024.html">Read more</a>
+        </div>
+        <div class="featured-item">
+            <img src="chloewin.jpg" alt="Feature 3">
+            <h3>Thought&Action: B.E.T.A. Challenge Winners Rack Up Double the Awards</h3>
+            <p>Undergraduate winner Samaha created BOND to address poor management, a situation that took a toll on her during her first remote work internship.</p>
+            <a href="https://entrepreneurship.babson.edu/beta-challenge-winners-2024/">Read more</a>
+        </div>
+    </div>
+    
+    <!-- Subscription -->
+    <div class="newsletter-subscription">
+        <h2>Subscribe for life updates!</h2>
+        <form id="newsletter-form">
+            <input type="email" id="email" placeholder="email address" required>
+            <button type="submit">SUBMIT</button>
+        </form>
+    </div>
+
+</body>
+</html>
